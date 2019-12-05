@@ -1,0 +1,56 @@
+<div class="container">
+  <div class="fixed">
+    <div style = "margin-right: 50px" class="fixed">
+      <ng-container *ngFor="let locs of locsFix; let i = index">
+        <div style="margin: 3px" class="grid-container">
+          <div class="grid-item head"></div>
+          <div class="grid-item head"><strong>{{ 5 + 5 * i }}</strong></div>
+          <div class="grid-item head"><strong>{{ 4 + 5 * i }}</strong></div>
+          <div class="grid-item head"><strong>{{ 3 + 5 * i }}</strong></div>
+          <div class="grid-item head"><strong>{{ 2 + 5 * i }}</strong></div>
+          <div class="grid-item head"><strong>{{ 1 + 5 * i }}</strong></div>
+          <div class="grid-item head"></div>
+          <div class="grid-item rackID"><strong>{{ i + 1 }}</strong></div>
+          <div class="grid-item headA">A</div>
+          <div class="grid-item headB">B</div>
+          <div class="grid-item headC">C</div>
+          <ng-container *ngFor="let location of locs; let j = index">
+              <ng-container *ngFor="let element of location; let k = index; trackBy: trackByFn;">
+                <div class="grid-item"><input [(ngModel)] = "locsFix[i][j][location.length - 1 - k]"  type = "text"></div>
+              </ng-container>
+          </ng-container>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+  <div class="flex-item">
+    <button class = "button" (click) = "update()" style = "width: 100%; height: 100%;"> <h1>UPDATE</h1> </button>
+  </div>
+</div>
+<div class="flex-item">
+  <div style="height: 1600px; max-height: 90vh" mat-dialog-content>
+    <ng-container *ngFor="let locs of locsCPU; let i = index">
+        <div style="margin: 3px" class="grid-container-cpus">
+          <div class="grid-item head"></div>
+          <div class="grid-item head"><strong>{{ 9 + 9 * i }}</strong></div>
+          <div class="grid-item head"><strong>{{ 8 + 9 * i }}</strong></div>
+          <div class="grid-item head"><strong>{{ 7 + 9 * i }}</strong></div>
+          <div class="grid-item head"><strong>{{ 6 + 9 * i }}</strong></div>
+          <div class="grid-item head"><strong>{{ 5 + 9 * i }}</strong></div>
+          <div class="grid-item head"><strong>{{ 4 + 9 * i }}</strong></div>
+          <div class="grid-item head"><strong>{{ 3 + 9 * i }}</strong></div>
+          <div class="grid-item head"><strong>{{ 2 + 9 * i }}</strong></div>
+          <div class="grid-item head"><strong>{{ 1 + 9 * i }}</strong></div>
+          <div class="grid-item head"></div> 
+          <div class="grid-item rackIDcpu"><strong>{{ i + 1 }}</strong></div>
+          <div class="grid-item headA">A</div>
+          <div class="grid-item headB">B</div>
+          <ng-container *ngFor="let location of locs; let j = index">
+            <ng-container *ngFor="let elem of location; let k = index; trackBy: trackByFn;">
+              <div class="grid-item"><input [(ngModel)] = "locsCPU[i][j][location.length - 1 - k]" type = "text"></div>
+            </ng-container>
+          </ng-container>
+        </div>
+      </ng-container>
+  </div>
+</div>

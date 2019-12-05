@@ -1,0 +1,18 @@
+<nav id="sidebar" class="navbar-dark bg-dark" [ngClass]="{'hidden': sideNavService.hideSideNav }">
+    <h2>Filtrar</h2>
+    <div class = "filters">
+        <h5>Model</h5>
+        <input type="text"  [(ngModel)]= "model.model" (ngModelChange) = "filterApply()" >
+        <h5>Leader</h5>
+        <input type="text"  [(ngModel)]= "model.leader" (ngModelChange) = "filterApply()" >
+        <h5>Line</h5>
+        <input type="text"  [(ngModel)]= "model.line" (ngModelChange) = "filterApply()" >
+        <h5>Status</h5>
+        <input type="text"  [(ngModel)]= "model.status" (ngModelChange) = "filterApply()" >
+        <h5>Fixture</h5>
+        <input type="text"  [(ngModel)]= "model.fixture" (ngModelChange) = "filterApply()" >
+        <h5>Cpu</h5>
+        <input type="text"  [(ngModel)]= "model.cpu" (ngModelChange) = "filterApply()" >
+
+    </div>
+</nav>  

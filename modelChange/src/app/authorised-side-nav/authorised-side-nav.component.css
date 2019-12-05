@@ -1,0 +1,41 @@
+:host {
+    background: #343a40;
+}
+    
+#sidebar {
+    position: absolute;
+    margin-top: 20px;
+    min-width: 350px;
+    max-width: 350px;
+    min-height: 100vh;
+    background-color: rgb(165, 125, 52);
+    color: #FFFFFF;
+    transition: all 0.3s;
+    font-weight: 300;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+#sidebar.hidden {
+    margin-left: -370px;
+}
+
+h2{
+    text-align: center;
+}
+h5, input {
+    margin-left: 20px
+}
+h5 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+input {
+    margin-bottom: 20px;
+}
+.filters {
+    padding: 10px;
+    margin: 10px;
+    background-color: rgb(114, 87, 37);
+
+}

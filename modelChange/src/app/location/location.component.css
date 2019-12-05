@@ -1,0 +1,86 @@
+.grid-container {
+    display: grid;
+    padding: 3px;
+    background-color: rgb(73, 73, 73);
+    grid-template-columns: auto auto auto auto auto auto auto;
+  }
+  .grid-container-cpus{
+    display: grid;
+    padding: 3px;
+    background-color: rgb(73, 73, 73);
+    grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto;
+  }
+
+  .head{
+    font-size: 1.5em;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    background-color: dodgerblue;
+    color: white;
+  }
+  .headA{
+    font-size: 1.1em;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    background-color: dodgerblue;
+    color: white;
+    grid-area: 2 / 1 / 3 / 2;
+  }
+  .headB{
+    font-size: 1.1em;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    background-color: dodgerblue;
+    color: white;
+    grid-area: 3 / 1 / 4 / 2;
+  }
+  .headC{
+    font-size: 1.1em;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    background-color: dodgerblue;
+    color: white;
+    grid-area: 4 / 1 / 5 / 2;
+  }
+  .grid-item{
+    margin: 2px;
+  }
+  .busy{
+      padding: 5px;
+      background-color: rgb(218, 218, 218);
+  }
+  .free{
+      padding: 5px;
+      background-color: red;
+  }
+  .rackID {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: navy;
+    grid-area: 2 / 7 / 5 / 8;
+    font-size: 2em;
+    color: white;
+}
+.rackIDcpu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: navy;
+  grid-area: 2 / 11 / 4 / 12;
+  font-size: 2em;
+  color: white;
+}
+.container{
+  margin-top: 30px;
+  display: flex;
+}
+.fixed{
+  width: 400px;
+}
+.flex-item{
+  flex-grow: 1;
+}
+h1{
+  font-size: 3em;
+}

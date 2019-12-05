@@ -1,0 +1,64 @@
+<h1 mat-dialog-title><strong>Fixture: </strong>{{fixturePlace}}<strong>   CPU: </strong>{{CPUplace}}</h1>
+<div class="container">
+  <div style = "margin-right: 50px" class="fixed">
+    <div style="height: 1100px; max-height: 90vh" mat-dialog-content>
+      <ng-container *ngFor="let racks of fixtures; let i = index">
+        <ng-container *ngIf="racks[0][0] != 2">
+          <div style="margin: 3px" class="grid-container">
+            <div class="grid-item head"></div>
+            <div class="grid-item head"><strong>{{ 5 + 5 * i }}</strong></div>
+            <div class="grid-item head"><strong>{{ 4 + 5 * i }}</strong></div>
+            <div class="grid-item head"><strong>{{ 3 + 5 * i }}</strong></div>
+            <div class="grid-item head"><strong>{{ 2 + 5 * i }}</strong></div>
+            <div class="grid-item head"><strong>{{ 1 + 5 * i }}</strong></div>
+            <div class="grid-item head"></div>
+            <div class="grid-item rackID"><strong>{{ i + 1 }}</strong></div>
+            <div class="grid-item headA">A</div>
+            <div class="grid-item headB">B</div>
+            <div class="grid-item headC">C</div>
+            <ng-container *ngFor="let rack of racks; let j = index">
+              <ng-container *ngFor="let element of rack; let k = index">
+                <div *ngIf="rack[rack.length-1-k] == 0; else isCellFree" class="grid-item busy"></div>
+                <ng-template #isCellFree>
+                  <div *ngIf="rack[rack.length-1-k] == 1" class="grid-item free"></div>
+                </ng-template>
+              </ng-container>
+            </ng-container>
+          </div>
+        </ng-container>
+      </ng-container>
+    </div>
+  </div>
+  <div class="flex-item">
+    <div style="height: 1100px; max-height: 90vh" mat-dialog-content>
+      <ng-container *ngFor="let racks of CPUs; let i = index">
+        <ng-container *ngIf="racks[0][0] != 2">
+          <div style="margin: 3px" class="grid-container-cpus">
+            <div class="grid-item head"></div>
+            <div class="grid-item head"><strong>{{ 9 }}</strong></div>
+            <div class="grid-item head"><strong>{{ 8 }}</strong></div>
+            <div class="grid-item head"><strong>{{ 7 }}</strong></div>
+            <div class="grid-item head"><strong>{{ 6 }}</strong></div>
+            <div class="grid-item head"><strong>{{ 5 }}</strong></div>
+            <div class="grid-item head"><strong>{{ 4 }}</strong></div>
+            <div class="grid-item head"><strong>{{ 3 }}</strong></div>
+            <div class="grid-item head"><strong>{{ 2 }}</strong></div>
+            <div class="grid-item head"><strong>{{ 1 }}</strong></div>
+            <div class="grid-item head"></div> 
+            <div class="grid-item rackIDcpu"><strong>{{ i + 1 }}</strong></div>
+            <div class="grid-item headA">A</div>
+            <div class="grid-item headB">B</div>
+            <ng-container *ngFor="let rack of racks; let j = index">
+              <ng-container *ngFor="let element of rack; let k = index">
+                <div *ngIf="rack[rack.length-1-k] == 0; else isCellFree" class="grid-item busy"></div>
+                <ng-template #isCellFree>
+                  <div *ngIf="rack[rack.length-1-k] == 1" class="grid-item free"></div>
+                </ng-template>
+              </ng-container>
+            </ng-container>
+          </div>
+        </ng-container>
+      </ng-container>
+    </div>
+  </div>
+</div>
